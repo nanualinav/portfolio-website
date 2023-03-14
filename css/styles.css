@@ -3,6 +3,7 @@ html {
     height: 100%;
     width: 100%;
     font-size: 16px;
+    font-family: Didot, sans-serif;
 }
 
 body {
@@ -15,7 +16,7 @@ body {
 
 #content {
     width: 85%; 
-    height: 500px; /* to update */
+    height: 85%; /* to update */
     margin: 5rem auto;
     padding: 15px;
     position: relative;
@@ -30,6 +31,7 @@ ul {
 nav li {
     display: inline;
     float: left;
+    top: 0;
 }
 
 li a {
@@ -38,7 +40,7 @@ li a {
     text-align: center;
     padding: .5rem;
     text-decoration: none;
-    width: 3.5rem;
+    width: 5rem;
     color: black;
 }
 
@@ -52,4 +54,97 @@ li a:hover:not(.active) {
 .active {
     background-color: white;
     color: black;
+}
+
+.about-me-section {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 2rem;
+    margin-top: 9rem;
+    margin-left: 5rem;
+    margin-bottom: 5rem;
+    border: 1px solid red;
+    max-width: 80%;
+}
+
+.avatar {
+    width: 20rem;
+    height: 20rem;
+    background-image: url(../images/avatar.jpg);
+    background-size: cover;
+    border: 1px solid green;
+}
+
+.about-me {
+    border: 1px solid blue;
+}
+
+.about-me p {
+    color: dimgray;
+    max-width: 30rem;
+    font-size: 18px;
+}
+
+/* Projects */
+
+.projects-section {
+    border: 1px solid gold;
+    margin-left: 5rem;
+    max-width: 80%;
+}
+
+.image-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project span {
+    font-weight: bold;
+}
+
+.accordion {
+    background-color: whitesmoke;
+    color: black;
+    cursor: pointer;
+    padding: .8rem;
+    width: 100%;
+    text-align: left;
+    font-family: Didot, sans-serif;
+    border: 1px solid black;
+    border-radius: .3125rem;
+    outline: none;
+    font-size: 1rem;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: whitesmoke;
+}
+
+.accordion:after {
+    content: '\002B';
+    color: black;
+    font-weight: bold;
+    float: right;
+    margin-left: .3125rem;
+  }
+  
+.active:after {
+    content: "\2212";
+}
+
+.panel {
+  padding: 0 1.125rem;
+  background-color: whitesmoke;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
